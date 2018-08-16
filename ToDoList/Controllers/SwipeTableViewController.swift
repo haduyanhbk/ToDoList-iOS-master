@@ -20,7 +20,6 @@ class SwipeTableViewController: UITableViewController, SwipeTableViewCellDelegat
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! SwipeTableViewCell
         cell.delegate = self
         return cell
-
     }
     
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
@@ -34,10 +33,8 @@ class SwipeTableViewController: UITableViewController, SwipeTableViewCellDelegat
             // handle action by updating model with deletion
             self.updateModel(at: indexPath)
         }
-
         // customize the action appearance
         deleteAction.image = UIImage(named: "delete-icon")
-
         return [deleteAction]
     }
 
